@@ -1,3 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-blue-600 text-white px-4 py-3">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">
+                <a href="#"> My Logo</a>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-gray-300">Home</a>
+                <a href="#" class="hover:text-gray-300">About</a>
+                <a href="#" class="hover:text-gray-300">Services</a>
+                <a href="#" class="hover:text-gray-300">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2">
+            <a href="#" class="block px-4 py-2 hover:bg-blue-500">Home</a>
+            <a href="#" class="block px-4 py-2 hover:bg-blue-500">About</a>
+            <a href="#" class="block px-4 py-2 hover:bg-blue-500">Services</a>
+            <a href="#" class="block px-4 py-2 hover:bg-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +63,11 @@
 
 </head>
 <body>
-    <h1>Hey</h1>
+    <h1>Hey,It's me Tuha</h1>
+    <div class="flex flex-row">
+        <div class="basis-1/4 bg-red-300 pt-10 mx-5 text-center">01</div>
+        <div class="basis-1/4 bg-orange-300 pt-10 mx-5 text-center">02</div>
+        <div class="basis-1/2 bg-red-300 pt-10 mx-5 text-center">03</div>
+      </div>
 </body>
 </html>
